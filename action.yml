@@ -1,0 +1,25 @@
+name: 'Slack Deployment Action'
+description: 'Publishes a message on Slack on a deployment'
+branding:
+  icon: message-circle
+  color: blue
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+inputs:
+  slack_channel:
+    description: 'Name of a slack channel identifier (ex: general)'
+    required: true
+
+  slack_username:
+    description: 'Customize the name of the bot. By default is github user'
+    required: false
+
+  slack_icon_emoji:
+    description: 'Customize an avatar by using an emoji.'
+    required: false
+
+  slack_icon_url:
+    description: 'Customize bot avatar by providing an URL to image'
+    required: false

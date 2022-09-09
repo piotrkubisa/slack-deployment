@@ -1,0 +1,11 @@
+name: 'Acceptance'
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: piotrkubisa/slack-deployment@master
