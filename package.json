@@ -14,10 +14,11 @@
     "@actions/core": "^1.9.1",
     "@actions/github": "^5.0.3"
   },
-  "main": "src/main.ts",
   "scripts": {
     "build": "npm run build:compile && npm run build:package",
     "build:compile": "tsc",
-    "build:package": "ncc build --source-map"
+    "build:package": "npm run build:package:main && npm run build:package:post",
+    "build:package:main": "ncc build --source-map -o dist/main ./src/main/index.ts",
+    "build:package:post": "ncc build --source-map -o dist/post ./src/post/index.ts"
   }
 }

@@ -6,7 +6,8 @@ branding:
 
 runs:
   using: 'node16'
-  main: 'dist/index.js'
+  main: 'dist/main/index.js'
+  post: 'dist/post/index.js'
 inputs:
   slack_channel:
     description: 'Name of a slack channel identifier (ex: general)'

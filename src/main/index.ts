@@ -1,5 +1,5 @@
 import * as core from '@actions/core'
-import { publishMessage } from './action'
+import { publishMessage } from '../action'
 
 publishMessage()
   .catch(err => {
