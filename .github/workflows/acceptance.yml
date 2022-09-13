@@ -11,3 +11,5 @@ jobs:
       - uses: piotrkubisa/slack-deployment@master
         with:
           slack_channel: slack-deployment
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
