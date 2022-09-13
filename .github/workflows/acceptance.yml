@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-  build:
+  acceptance:
     runs-on: ubuntu-latest
     steps:
       - uses: piotrkubisa/slack-deployment@master

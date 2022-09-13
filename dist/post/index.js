@@ -2673,65 +2673,6 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 773:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.publishMessage = void 0;
-async function publishMessage() {
-    return new Promise(() => {
-        console.log("Hello, World!");
-    });
-}
-exports.publishMessage = publishMessage;
-
-
-/***/ }),
-
-/***/ 875:
-/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-__exportStar(__nccwpck_require__(773), exports);
-__exportStar(__nccwpck_require__(927), exports);
-
-
-/***/ }),
-
-/***/ 927:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.slackIconUrl = exports.slackIconEmoji = exports.slackUsername = exports.slackChannel = void 0;
-const core_1 = __nccwpck_require__(186);
-exports.slackChannel = (0, core_1.getInput)('slack_channel', { required: true });
-exports.slackUsername = (0, core_1.getInput)('slack_username');
-exports.slackIconEmoji = (0, core_1.getInput)('slack_icon_emoji');
-exports.slackIconUrl = (0, core_1.getInput)('slack_icon_url');
-
-
-/***/ }),
-
 /***/ 323:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -2762,8 +2703,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(186));
-const action_1 = __nccwpck_require__(875);
-(0, action_1.publishMessage)()
+const run = () => {
+    return new Promise(() => {
+        console.log('Hello World');
+    });
+};
+run()
     .catch(err => {
     core.setFailed(err.message);
     process.exit(1);

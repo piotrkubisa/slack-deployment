@@ -19,10 +19,10 @@
     "@slack/web-api": "^6.7.2"
   },
   "scripts": {
-    "build": "npm run build:compile && npm run build:package",
-    "build:compile": "tsc",
+    "build": "npm run build:package",
     "build:package": "npm run build:package:main && npm run build:package:post",
     "build:package:main": "ncc build --source-map -o dist/main ./src/main/index.ts",
-    "build:package:post": "ncc build --source-map -o dist/post ./src/post/index.ts"
+    "build:package:post": "ncc build --source-map -o dist/post ./src/post/index.ts",
+    "run:main": "act"
   }
 }

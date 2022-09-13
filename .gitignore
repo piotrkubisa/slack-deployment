@@ -131,3 +131,6 @@ dist
 
 # GitHub Actions articact
 !dist
+
+# Act
+.secrets
